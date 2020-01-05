@@ -72,7 +72,7 @@ Add the method `public function toPushy($notifiable)` to your notification, and 
 use Fawzanm\Pushy\PushyMessage;
 ...
 
-public function toFcm($notifiable) 
+public function toPushy($notifiable) 
 {
     $message = new PushyMessage();
     $message->notification([
