@@ -66,7 +66,7 @@ public function via($notifiable)
 }
 ```
 
-Add the method `public function toFcm($notifiable)` to your notification, and return an instance of `FcmMessage`: 
+Add the method `public function toPushy($notifiable)` to your notification, and return an instance of `PushyMessage`: 
 
 ```php
 use Fawzanm\Pushy\PushyMessage;
@@ -75,7 +75,7 @@ use Fawzanm\Pushy\PushyMessage;
 public function toFcm($notifiable) 
 {
     $message = new PushyMessage();
-    $message->content([
+    $message->notification([
                'body' => 'Hello, World..',
                'badge' => 1,
                'sound' => 'ping.aiff'
@@ -90,7 +90,7 @@ When sending to specific device, make sure your notifiable entity has `routeNoti
 ```php
 
    /**
-     * Route notifications for the FCM channel.
+     * Route notifications for the Pushy channel.
      *
      * @param \Illuminate\Notifications\Notification $notification
      * @return string
