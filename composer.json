@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "NotificationChannels\\Fawzanm\\Pushy\\": "src"
+            "Fawzanm\\Pushy\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NotificationChannels\\Fawzanm\\Pushy\\Test\\": "tests"
+            "Fawzanm\\Pushy\\Test\\": "tests"
         }
     },
     "scripts": {
