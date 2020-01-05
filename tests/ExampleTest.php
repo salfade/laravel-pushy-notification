@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\Fawzanm\Pushy\Test;
+namespace Fawzanm\Pushy\Test;
 
 use PHPUnit\Framework\TestCase;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\Fawzanm\Pushy;
+namespace Fawzanm\Pushy;
 
 
 class PushyMessage

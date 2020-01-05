@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\Fawzanm\Pushy\Exceptions;
+namespace Fawzanm\Pushy\Exceptions;
 
 class CouldNotSendNotification extends \Exception
 {

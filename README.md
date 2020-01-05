@@ -49,13 +49,58 @@ Manually registering the service provider?
 ### Setting up the Pushy service
 
 [Pushy](https://pushy.me/docs/) has a great documentation you can follow. Be sure to check it out. 
-## Usage
+## Example Usage
 
-Some code examples, make it clear how to use the package
+Use Artisan to create a notification:
 
-### Available Message methods
+```bash
+php artisan make:notification SomeNotification
+```
 
-A list of all available options
+Return `[pushy]` in the `public function via($notifiable)` method of your notification:
+
+```php
+public function via($notifiable)
+{
+    return ['pushy'];
+}
+```
+
+Add the method `public function toFcm($notifiable)` to your notification, and return an instance of `FcmMessage`: 
+
+```php
+use Fawzanm\Pushy\PushyMessage;
+...
+
+public function toFcm($notifiable) 
+{
+    $message = new PushyMessage();
+    $message->content([
+               'body' => 'Hello, World..',
+               'badge' => 1,
+               'sound' => 'ping.aiff'
+           ])->data([
+               'type' => 'notification',
+           ]);
+    return $message;
+}
+```
+
+When sending to specific device, make sure your notifiable entity has `routeNotificationForPushy` method defined:
+```php
+
+   /**
+     * Route notifications for the FCM channel.
+     *
+     * @param \Illuminate\Notifications\Notification $notification
+     * @return string
+     */
+    public function routeNotificationForPushy($notification)
+    {
+        return $this->device_token;
+    }
+```
+
 
 ## Changelog
 

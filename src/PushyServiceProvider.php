@@ -1,6 +1,6 @@
 <?php
 
-namespace NotificationChannels\Fawzanm\Pushy;
+namespace Fawzanm\Pushy;
 
 use GuzzleHttp\Client;
 use Illuminate\Notifications\ChannelManager;
