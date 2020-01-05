@@ -42,7 +42,7 @@ Manually registering the service provider?
 * Add an entry in your `config/services.php` and replace `SECRET_API_KEY` with your key
  
  ```
-'pushy' => [ 'key' => 'SECRET_API_KEY' ]
+'pushy' => [ 'key' => env('SECRET_API_KEY','default-api-key') ]
 ````
 
 
