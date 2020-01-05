@@ -39,7 +39,7 @@ Manually registering the service provider?
 ```
 
 * Obtain a SECRET_API_KEY from [Pushy](https://pushy.me/docs/) by creating an app
-* Add an entry in your `config/services.php` and replace `SECRET_API_KEY` with your key
+* Add an entry in your `config/services.php` and an entry in `.env` file as `SECRET_API_KEY=your_api_key`. You can replace the `default-api-key` with your key if you are not using an environment file. 
  
  ```
 'pushy' => [ 'key' => env('SECRET_API_KEY','default-api-key') ]
