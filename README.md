@@ -1,10 +1,11 @@
+
 # Laravel Pushy Notification
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fawzanm/laravel-pushy-notification.svg?style=flat-square)](https://packagist.org/packages/fawzanm/laravel-pushy-notification)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/fawzanm/laravel-pushy-notification.svg?style=flat-square)](https://packagist.org/packages/fawzanm/laravel-pushy-notification)
 
-This package makes it easy to send notifications using [Pushy](https://pushy.me/docs/) with Laravel 5.5+ and 6.0
+This package makes it easy to send notifications using [Pushy](https://pushy.me/docs/) with Laravel 5.5+, 6.0 and 7.0
 
 Send push notifications to devices by hitting up [Pushy](https://pushy.me/docs/) REST API from your laravel app.
 
