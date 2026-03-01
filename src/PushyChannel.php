@@ -62,7 +62,7 @@ class PushyChannel
             ]
         );
 
-        return \GuzzleHttp\json_decode($response->getBody(), true);
+        return json_decode((string) $response->getBody(), true);
 
     }
 
